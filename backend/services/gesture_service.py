@@ -1,5 +1,10 @@
 import os, json, numpy as np, mediapipe as mp
 from utils.helpers import landmarks_to_features
+import os
+os.environ["OMP_NUM_THREADS"] = "1"
+os.environ["TF_NUM_INTEROP_THREADS"] = "1"
+os.environ["TF_NUM_INTRAOP_THREADS"] = "1"
+os.environ["OPENBLAS_NUM_THREADS"] = "1"
 
 BASE = os.path.dirname(os.path.dirname(__file__))
 MODEL_PATH = os.path.join(BASE, "models", "gesture_model.h5")
