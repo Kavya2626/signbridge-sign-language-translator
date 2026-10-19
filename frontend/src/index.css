@@ -1,0 +1,12 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+body { @apply bg-ink text-slate-200 font-sans antialiased;
+  background-image: radial-gradient(60rem 30rem at 10% -10%, rgba(79,140,255,.18), transparent),
+                    radial-gradient(50rem 30rem at 100% 20%, rgba(155,92,255,.18), transparent); }
+html { scroll-behavior: smooth; }
+@layer components {
+  .glass { @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl; }
+  .btn { @apply px-6 py-3 rounded-full font-semibold text-white bg-gradient-to-r from-neon to-violet shadow-glow transition hover:scale-105 active:scale-95 disabled:opacity-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white; }
+  .grad-text { @apply bg-gradient-to-r from-neon to-violet bg-clip-text text-transparent; }
+  .section { @apply max-w-6xl mx-auto px-5 py-20; }
+}
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }

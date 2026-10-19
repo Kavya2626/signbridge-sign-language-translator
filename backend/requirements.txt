@@ -1,0 +1,9 @@
+flask==3.0.3
+flask-cors==4.0.1
+opencv-contrib-python==4.11.0.86
+mediapipe==0.10.21
+tensorflow==2.16.2
+numpy<2
+scikit-learn==1.5.1
+SpeechRecognition==3.10.4
+gTTS==2.5.3
